@@ -7,6 +7,7 @@ using System.Collections.Concurrent;
 using System.Data.SqlClient;
 using System.Data;
 
+
 namespace api.standard.ejucloud.com
 {
     public class SimpleDataHelper
@@ -15,14 +16,14 @@ namespace api.standard.ejucloud.com
         /// 连接字符串模板
         /// </summary>
         internal static string connectionStringMS = ConfigurationManager.ConnectionStrings["DBSH"].ConnectionString;
-
+        internal static string connectionStringMSOlap = ConfigurationManager.ConnectionStrings["MDXConnectString"].ConnectionString;
 
         /// <summary>
         /// 查询信息接口用
         /// </summary>
         /// 
         public static readonly string MSConnectionString = string.Format(connectionStringMS, "DB_HOUSE_PRICE_SHANGHAI");
-
+        public static readonly string MDXConnectString = connectionStringMSOlap;
 
         //查询
         public static System.Data.DataSet Query(string ConnString, string sql)
@@ -98,5 +99,7 @@ namespace api.standard.ejucloud.com
         //    return dt;
 
         //}
+
+
     }
 }

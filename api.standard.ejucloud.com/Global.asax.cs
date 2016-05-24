@@ -40,6 +40,9 @@ namespace api.standard.ejucloud.com
             helper.MapRoute("api/standarduseraddress/", "StandardAddress", "StandardUserAddress");
             helper.MapRoute("api/addressmatch/", "StandardAddress", "AddressMatch");
 
+            //MDX查询接口
+            helper.MapRoute("api/olap/", "MDXQuery", "MDXQuery");
+
 
         }
 
