@@ -18,6 +18,7 @@ namespace api.standard.ejucloud.com.Controllers
 
             try
             {
+                int i = 0;
 
                 DataSet ds = MDXHelper.ExecuteDataSet(MDXHelper.MDXConnectString, MDXsql);
 
